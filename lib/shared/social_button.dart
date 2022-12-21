@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:registration_demo/feature/notification/view/view.dart';
 import 'package:registration_demo/utils/app_theme.dart';
 

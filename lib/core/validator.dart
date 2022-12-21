@@ -1,3 +1,4 @@
+// Project imports:
 import 'package:registration_demo/core/constants.dart';
 
 class Validator {

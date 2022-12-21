@@ -1,5 +1,8 @@
-import 'package:registration_demo/core/constants.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
+import 'package:registration_demo/core/constants.dart';
 import 'package:registration_demo/utils/app_theme.dart';
 
 class AppInputDecoration extends InputDecoration {

@@ -8,6 +8,9 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:rounded_loading_button/rounded_loading_button.dart';
+
+// Project imports:
 import 'package:registration_demo/core/validator.dart';
 import 'package:registration_demo/feature/dashboard/view/view.dart';
 import 'package:registration_demo/feature/notification/view/view.dart';
@@ -15,11 +18,8 @@ import 'package:registration_demo/feature/register/bloc/register_bloc.dart';
 import 'package:registration_demo/feature/register/services/repo.dart';
 import 'package:registration_demo/shared/input_decoration.dart';
 import 'package:registration_demo/shared/loading_button.dart';
-import 'package:registration_demo/shared/social_button.dart';
-import 'package:rounded_loading_button/rounded_loading_button.dart';
-
-// Project imports:
 import 'package:registration_demo/shared/remove_focus.dart';
+import 'package:registration_demo/shared/social_button.dart';
 import 'package:registration_demo/utils/app_theme.dart';
 
 class RegisterPage extends StatelessWidget implements AutoRouteWrapper {

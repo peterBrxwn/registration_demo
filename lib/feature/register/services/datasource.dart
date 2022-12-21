@@ -1,17 +1,20 @@
-// Package imports:
+// Dart imports:
 import 'dart:convert';
 
+// Package imports:
 import 'package:dartz/dartz.dart';
-import 'package:registration_demo/core/app_error.dart';
 
 // Project imports:
-
+import 'package:registration_demo/core/app_error.dart';
 import 'package:registration_demo/core/typedef.dart';
 import 'package:registration_demo/feature/register/domain/datasource.dart';
 import 'package:registration_demo/feature/register/domain/entity/register_dto.dart';
 import 'package:registration_demo/feature/register/services/fake_client.dart';
 import 'package:registration_demo/feature/register/services/model/register_dto.dart';
 import 'package:registration_demo/feature/register/services/params/register_param.dart';
+
+// Project imports:
+
 
 class AuthDatasourceImpl implements AuthDatasource {
   AuthDatasourceImpl();

@@ -1,7 +1,10 @@
 // Fake class
+
+// Dart imports:
 import 'dart:convert';
 import 'dart:math';
 
+// Package imports:
 import 'package:http/http.dart';
 import 'package:mockito/mockito.dart';
 import 'package:uuid/uuid.dart';

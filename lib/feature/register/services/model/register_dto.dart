@@ -1,5 +1,7 @@
-// Project imports:
+// Package imports:
 import 'package:json_annotation/json_annotation.dart';
+
+// Project imports:
 import 'package:registration_demo/feature/register/domain/entity/register_dto.dart';
 
 part 'register_dto.g.dart';

@@ -1,5 +1,8 @@
+// Package imports:
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+// Project imports:
 import 'package:registration_demo/core/validator.dart';
 import 'package:registration_demo/feature/notification/services/models/notif_msg.dart';
 import 'package:registration_demo/feature/register/domain/repo.dart';

@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 // Package imports:
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:registration_demo/feature/register/services/datasource.dart';
-import 'package:registration_demo/feature/register/services/repo.dart';
 
 // Project imports:
+import 'package:registration_demo/feature/register/services/datasource.dart';
+import 'package:registration_demo/feature/register/services/repo.dart';
 import 'package:registration_demo/injection.dart';
 import 'package:registration_demo/routing/observer.dart';
 import 'package:registration_demo/routing/router.gr.dart';
