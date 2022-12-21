@@ -1,15 +1,19 @@
 import 'package:registration_demo/core/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:registration_demo/utils/app_theme.dart';
 
 class AppInputDecoration extends InputDecoration {
   @override
-  InputBorder get border => OutlineInputBorder(
+  InputBorder get enabledBorder => OutlineInputBorder(
         borderRadius: Constants.borderRadius,
-        borderSide: const BorderSide(),
+        borderSide: BorderSide(color: fillColor),
       );
 
   @override
-  TextStyle get labelStyle => const TextStyle(fontWeight: FontWeight.normal);
+  TextStyle get labelStyle => const TextStyle(
+        color: AppTheme.darkGrey,
+        fontWeight: FontWeight.normal,
+      );
 
   @override
   int get helperMaxLines => 3;
@@ -18,7 +22,10 @@ class AppInputDecoration extends InputDecoration {
   bool get isDense => true;
 
   @override
-  EdgeInsets get contentPadding => const EdgeInsets.all(12.5);
+  Color get fillColor => AppTheme.white;
+
+  @override
+  bool get filled => true;
 
   const AppInputDecoration({
     required String labelText,
@@ -32,49 +39,3 @@ class AppInputDecoration extends InputDecoration {
           suffixIcon: suffixIcon,
         );
 }
-
-class FiberDropdownSearchDecoration extends InputDecoration {
-  @override
-  TextStyle get labelStyle => const TextStyle(fontWeight: FontWeight.normal);
-
-  @override
-  EdgeInsets get contentPadding => const EdgeInsets.fromLTRB(12, 12, 0, 0);
-
-  const FiberDropdownSearchDecoration({required String labelText})
-      : super(labelText: labelText);
-}
-
-// class FiberInputDecoration extends InputDecoration {
-//   @override
-//   InputBorder get enabledBorder => OutlineInputBorder(
-//         borderRadius: Constants.borderRadius,
-//         borderSide: BorderSide(color: fillColor),
-//       );
-
-//   @override
-//   TextStyle get labelStyle => const TextStyle(fontWeight: FontWeight.normal);
-
-//   @override
-//   int get helperMaxLines => 3;
-
-//   @override
-//   bool get isDense => true;
-
-//   @override
-//   Color get fillColor => AppTheme.adaptiveGrey(false);
-
-//   @override
-//   bool get filled => true;
-
-//   const FiberInputDecoration({
-//     required String labelText,
-//     Widget? prefixIcon,
-//     Widget? suffixIcon,
-//     String? helperText,
-//   }) : super(
-//           helperText: helperText,
-//           labelText: labelText,
-//           prefixIcon: prefixIcon,
-//           suffixIcon: suffixIcon,
-//         );
-// }

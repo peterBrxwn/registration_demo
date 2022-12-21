@@ -7,7 +7,9 @@ part of 'register_dto.dart';
 // **************************************************************************
 
 RegisterDtoImpl _$RegisterDtoImplFromJson(Map<String, dynamic> json) =>
-    RegisterDtoImpl(token: json['token'] as String?);
+    RegisterDtoImpl(
+      token: json['token'] as String?,
+    );
 
 Map<String, dynamic> _$RegisterDtoImplToJson(RegisterDtoImpl instance) {
   final val = <String, dynamic>{};

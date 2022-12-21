@@ -26,12 +26,13 @@ class Notify {
   }
 
   static void generic(BuildContext context, NotificationType type, String msg) {
+        _removeToast(context);
     switch (type) {
       case NotificationType.error:
         Notify.error(context, msg);
         break;
       case NotificationType.info:
-        Notify.info(context, msg);
+        Notify.info(msg);
         break;
       case NotificationType.success:
         Notify.success(context, msg);
@@ -39,7 +40,7 @@ class Notify {
     }
   }
 
-  static void info(BuildContext context, String msg) {
+  static void info(String msg) {
     msg = msg.trim();
     if (msg.isEmpty || msg.length > 150) {
       msg = 'Something went wrong. Please try again.';
@@ -50,9 +51,15 @@ class Notify {
       toastLength: Toast.LENGTH_LONG,
       gravity: ToastGravity.TOP,
       timeInSecForIosWeb: 8,
-      backgroundColor: AppTheme.lightGrey,
-      textColor: AppTheme.darkGrey,
+      backgroundColor: AppTheme.darkGrey,
+      textColor: AppTheme.lightGrey,
     );
+  }
+
+  static void _removeToast(BuildContext context) {
+    Fluttertoast.cancel();
+    final fToast = FToast();
+    fToast.init(context);
   }
 
   static void success(BuildContext context, String msg) {

@@ -6,11 +6,11 @@ import 'package:registration_demo/feature/register/domain/repo.dart';
 import 'package:registration_demo/feature/register/services/params/register_param.dart';
 
 class RegisterImpl implements RegisterRepo {
-  RegisterImpl(this.productDatasource);
-  AuthDatasource productDatasource;
+  RegisterImpl(this.authDatasource);
+  AuthDatasource authDatasource;
 
   @override
   Future<ErrorOrType<RegisterDto>> register({required RegisterParam param}) async {
-    return await productDatasource.register(param);
+    return await authDatasource.register(param);
   }
 }

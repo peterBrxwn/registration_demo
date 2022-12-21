@@ -12,10 +12,12 @@ class AppTheme {
 
   static const white = Color(0xFFFFFFFF);
   static const lightGrey = Color(0xFFF2F3F5);
-  static const darkGrey = Color(0xFF9E9E9E);
+  static const darkGrey = Color(0xFF777777);
   static const black = Color(0xFF181818);
   static const green = Color(0xFF019C00);
   static const transparent = Colors.transparent;
+  static const notWhite = Color(0xFFEDF0F2);
+  static const notBlack = Color.fromRGBO(27, 27, 27, 1);
 
   static const themePrimary = Color(0xFFFFCA51);
   static const _themeRed = Color(0xFFFF0626);
@@ -40,7 +42,7 @@ class AppTheme {
     subtitle1: TextStyle(fontWeight: FontWeight.bold),
     subtitle2: TextStyle(fontWeight: FontWeight.bold),
     overline: TextStyle(fontSize: 11, letterSpacing: 0.5),
-    bodyText1: TextStyle(fontSize: 18, color: AppTheme.themePrimary),
+    bodyText1: TextStyle(fontSize: 18, color: AppTheme.notBlack),
   );
   static const _surfaceMode = FlexSurfaceMode.highBackgroundLowScaffold;
   static const _blendLevel = 15;
@@ -85,7 +87,7 @@ class AppTheme {
     blendLevel: _blendLevel,
     tooltipsMatchBackground: _tooltipsMatchBackground,
     fontFamily: _fontFamily,
-    onPrimary: white,
+    onPrimary: black,
     onError: white,
     onSecondary: white,
     textTheme: _textTheme,
@@ -93,6 +95,7 @@ class AppTheme {
     subThemesData: _subThemesData,
     visualDensity: _visualDensity,
     platform: _platform,
+    scaffoldBackground: notWhite,
   ).copyWith(
     brightness: Brightness.light,
     checkboxTheme: _checkBoxTheme,

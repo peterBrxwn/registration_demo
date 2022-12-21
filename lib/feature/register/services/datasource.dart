@@ -27,9 +27,8 @@ class AuthDatasourceImpl implements AuthDatasource {
 
       if (response.statusCode == 200) {
         return Right(RegisterDtoImpl.fromJson(jsonDecode(response.body)));
-      } else {
-        return Left(AppError());
       }
+      throw '';
     } catch (e) {
       return Left(AppError());
     }

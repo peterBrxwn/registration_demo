@@ -13,12 +13,6 @@ class Constants {
     caseSensitive: false,
     multiLine: false,
   );
-  static const googleLogoSvg = 'assets/images/ios-logo.svg';
-  static const fbLogoSvg = 'assets/images/ios-logo.svg';
-  static const appleLogoSvg = 'assets/images/ios-logo.svg';
-  static const borderRadiusInt = 5.0;
+  static const borderRadiusInt = 10.0;
   static final borderRadius = BorderRadius.circular(borderRadiusInt);
-  static final localStorage = LocalStorageConstants();
 }
-
-class LocalStorageConstants {}

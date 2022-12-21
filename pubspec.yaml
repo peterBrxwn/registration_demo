@@ -53,6 +53,8 @@ dependencies:
   rounded_loading_button: ^2.1.0
   mockito: ^5.3.2
   http: ^0.13.5
+  font_awesome_flutter: ^10.3.0
+  uuid: ^3.0.7
 
 dev_dependencies:
   flutter_test:

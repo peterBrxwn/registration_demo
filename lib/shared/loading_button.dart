@@ -1,5 +1,6 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
+import 'package:registration_demo/core/constants.dart';
 import 'package:registration_demo/utils/app_theme.dart';
 
 // Package imports:
@@ -7,7 +8,7 @@ import 'package:rounded_loading_button/rounded_loading_button.dart';
 
 class LoadingButton extends StatelessWidget {
   final RoundedLoadingButtonController controller;
-  final Function() onPressed;
+  final Function()? onPressed;
   final String text;
 
   const LoadingButton({
@@ -20,15 +21,21 @@ class LoadingButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RoundedLoadingButton(
-      borderRadius: 5,
+      borderRadius: Constants.borderRadiusInt,
       controller: controller,
       color: AppTheme.themePrimary,
       onPressed: onPressed,
-      width: 65,
-      height: 37,
-      child: Text(
-        text.toUpperCase(),
-        // style: const TextStyle(color: AppTheme.white),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            text,
+            style: Theme.of(context)
+                .textTheme
+                .bodyText2!
+                .copyWith(fontWeight: FontWeight.w600),
+          ),
+        ],
       ),
     );
   }
