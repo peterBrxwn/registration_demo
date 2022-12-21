@@ -5,7 +5,7 @@ class Constants {
   static const int versionCode = 56;
   static const String versionShort = 'v2.1.3';
   static RegExp emailRegExp = RegExp(
-    r'^[\w-.]+@([\w-]+.)+[\w-]{2,4}$',
+    r'^[\w-.]+@([\w-]+.)+[\w-]$',
     caseSensitive: false,
     multiLine: false,
   );

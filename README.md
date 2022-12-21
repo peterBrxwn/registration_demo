@@ -1,5 +1,5 @@
 # Registration Demo App
-This is the source code for the demo app Cart Demo mobile app (ios and android) built using flutter programming language.
+This is the source code for the demo app (Registration) Demo mobile app (ios and android) built using flutter programming language.
 
 ## APK FILE
 APK file can be found in [here](https://github.com/peterbrown0/cart_demo/blob/main/assets/app-release.apk) (`/assets/app-release.apk`)

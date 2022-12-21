@@ -263,6 +263,7 @@ class _SubmitButtonState extends State<_SubmitButton> {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<RegisterBloc, RegisterState>(
+      listenWhen: (previous, current) => previous.status != current.status,
       listener: (context, state) {
         if (state.status == Status.registerError) {
           _buttonController.error();

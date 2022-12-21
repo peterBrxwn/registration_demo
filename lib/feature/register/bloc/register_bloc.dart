@@ -41,6 +41,8 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
   }
 
   Future<void> _submit(Submit event, Emitter<RegisterState> emit) async {
+    emit(state.copyWith(status: Status.initial));
+
     try {
       final data = await _registerRepo.register(
         param: RegisterParam(email: state.email, password: state.password),
@@ -48,7 +50,7 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
       data.fold(
         (l) => emit(
           state.copyWith(
-            notifMsg: const NotifMsg(message: 'Something went wrong'),
+            notifMsg: NotifMsg(message: l.message),
             status: Status.registerError,
           ),
         ),

@@ -15,7 +15,6 @@ import 'package:registration_demo/feature/register/services/params/register_para
 
 // Project imports:
 
-
 class AuthDatasourceImpl implements AuthDatasource {
   AuthDatasourceImpl();
 
@@ -28,10 +27,11 @@ class AuthDatasourceImpl implements AuthDatasource {
         body: param.toJson(),
       );
 
+      final body = jsonDecode(response.body);
       if (response.statusCode == 200) {
-        return Right(RegisterDtoImpl.fromJson(jsonDecode(response.body)));
+        return Right(RegisterDtoImpl.fromJson(body));
       }
-      throw '';
+      return Left(AppError(message: body['message'] ?? 'Something went wrong'));
     } catch (e) {
       return Left(AppError());
     }

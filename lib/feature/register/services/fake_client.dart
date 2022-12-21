@@ -14,19 +14,21 @@ class FakeClient extends Fake implements Client {
   final random = Random();
 
   @override
-  Future<Response> get(Uri? url, {Map<String, String>? headers}) async {
-    return Response('', 200);
-  }
-
-  @override
   Future<Response> post(
     Uri url, {
     Map<String, String>? headers,
     Object? body,
     Encoding? encoding,
   }) async {
-    await Future.delayed(Duration(milliseconds: random.nextInt(3000)));
-    return Response(jsonEncode({'token': uuid.v4()}), 200);
-    // return Response(jsonEncode({'message': 'Invalid login details'}), 403);
+    // delay to simulate network delay
+    await Future.delayed(Duration(milliseconds: random.nextInt(2000)));
+
+    final content = body as Map<String, dynamic>;
+    final email = content['email'];
+    final password = content['password'];
+    if (email == 'peter@brown.com' && password == 'PeterBrown9') {
+      return Response(jsonEncode({'token': uuid.v4()}), 200);
+    }
+    return Response(jsonEncode({'message': 'Invalid login details'}), 403);
   }
 }
